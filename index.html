@@ -36,9 +36,27 @@
       
       <p id="locationStatus" class="info"></p>
 
-      <!-- Manual Location -->
-      <label>Purok / Street</label>
-      <input type="text" placeholder="Enter Purok or Street" required>
+      <!-- Barangay -->
+    <label for="barangay">Barangay</label>
+      <select id="barangay" onchange="loadStreets()" required>
+      <option value="">Select Barangay</option>
+      <option value="Ibaba del Sur">Ibaba del Sur</option>
+      <option value="Maytoong">Maytoong</option>
+      <option value="Ermita">Ermita</option>
+      <option value="Quinale">Quinale</option>
+      <option value="Ilaya del Sur">Ilaya del Sur</option>
+      <option value="Ilaya del Norte">Ilaya del Norte</option>
+      <option value="Bagumbayan">Bagumbayan</option>
+      <option value="Bangkusay">Bangkusay</option>
+      <option value="Ibaba del Norte">Ibaba del Norte</option>
+    </select>
+
+    <!-- Continue here!!!! Last Edited January 22, 2026, 9:40PM-->
+    <!-- Street / Purok -->
+    <label for="street">Purok / Street</label>
+      <select id="street" required>
+      <option value="">Select Street</option>
+    </select>
 
       <label>Landmark</label>
       <input type="text" placeholder="e.g. Near sari-sari store" required>
