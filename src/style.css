@@ -1,0 +1,161 @@
+/* CSS contents of Main Page */
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg: #f9fafb; /* light business background */
+    --card: #ffffff;
+    --muted: #6b7280;
+    --text: #111827;
+    --accent: #2563eb;  /* blue */
+    --accent-2: #3b82f6;
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+body {
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+/* Hero Section */
+.hero h1 .lead {
+    color: var(--muted);
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.hero .actions {
+    margin-top: 30px;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.nav_logo {
+    padding: 10px 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+a {
+    text-decoration: none;
+}
+.menu li a {
+    color: #111827;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: var(--accent-2);
+    color: #fff;
+}
+
+/*hamubrger menu*/
+/*.menu_toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu_toggle span {
+    height: 3px;
+    width: 25px;
+    background: #111827;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}*/
+
+
+/* Section Padding */
+section {
+    padding: 60px 20px;
+  }
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .muted {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: var(--radius);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Primary Button */
+/*@media (max-width: 768px) {
+    .menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #ffffff;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        display: none;
+        box-shadow: var(--shadow);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu_toggle {
+        display: flex;
+    }
+
+    .nav {
+        padding: 0 20px;
+    }
+}*/
