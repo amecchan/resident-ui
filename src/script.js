@@ -28,8 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
                 // Optional: if it's a special button, you might want different behavior
-                if (this.classList.contains('report-litter') || 
-                    this.classList.contains('barangay-login')) {
+                if (this.classList.contains('report-litter')) {
                     // Special buttons - close menu immediately
                     toggleMenu();
                 } else {
