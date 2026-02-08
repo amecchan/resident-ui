@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Litter</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <!-- Poppins font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!------- Logo -------- Not Final ------->
+  <link rel="icon" type="image/png" href="../assets/images/logo.png"/>
+
+</head>
+
+<body>
+  
+  <div class="container">
+    <h1>Report Litter</h1>
+
+    <form id="reportForm">
+
+      <!-- Waste Type -->
+      <label>Type of Waste</label>
+      <select required>
+        <option value="">Select Waste Type</option>
+        <option>Plastic</option>
+        <option>Mixed</option>
+        <option>Organic</option>
+      </select>
+
+      <!-- Location -->
+      <label>Location</label>
+      <button type="button" onclick="getLocation()">
+        📍 Use Current Location
+      </button>
+      <div id="map" class="map-box"></div>
+      
+      <p id="locationStatus" class="info"></p>
+      <p id="errorStatus" class="error-info"></p>
+
+      <!-- Street / Purok -->
+      <label for="street">Purok / Street</label>
+      <input type="text" id="street" placeholder="e.g. Purok 4 / Recto Street" required>
+
+      <!-- Landmark -->
+      <label>Landmark</label>
+      <input type="text" placeholder="e.g. Near sari-sari store" required>
+
+      <!-- Hidden GPS fields -->
+      <input type="hidden" id="latitude">
+      <input type="hidden" id="longitude">
+
+      <!-- Photo Upload -->
+      <label>Upload Photo</label>
+      <input type="file" accept="image/*">
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn">
+        Submit Report
+      </button>
+    </form>
+  </div>
+
+   <!-------- Modals ---------->
+    <div id="popupOverlay" class="popup-overlay">
+      <div class="popup-box">
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()">OK</button>
+      </div>
+    </div>
+
+
+  <script src="script.js"></script>
+  <script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>
